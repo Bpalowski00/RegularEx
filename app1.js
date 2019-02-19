@@ -10,13 +10,27 @@ re = /^hello$/i; // Must Begin and end with
 re = /h.llo/i;//Matches any one character
 re = /h*llo/i;//Matches any character 0nor more times
 re = /gre?a?y/i; //Optional Character
-re = /gre?a?y\?/i; //Optional Character
+re = /gre?y\?/i; //Optional Character
+
+// Brackets
+re = /gr[ae]y/i; // Must be whatever is inside the bracket
+re = /[GF]ray/i;
+re = /[^GF]ray/i; // Must not be what is inside the brackets with carrot symbol
+re = /[A-Z]ray/;// Must be upper uppercase inside brackets
+re = /[a-z]ray/;// Must be lower uppercase inside brackets
+re = /[A-Za-z]ray/; // Matches any letter both lower and upper case
+re = /[0-9]ray/; // Matches any diget any range EX- [0-2]ray 
+
+/// Braces {} -  Quantifiers
+re = /Hel{2}o/i; // Number of characters or numbers in that string - Hello has 2 L
+
+
 
 
 
 // String to match
-const str = 'Greay';
-//const str = 'Hello World';
+//const str = 'Gray';
+const str = 'Hello World';
 
 // Log results
 const result = re.exec(str);
