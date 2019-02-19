@@ -32,6 +32,13 @@ re = /Hel{2,}o/i; // Number of characters or numbers in that string - At least 2
 re = /([0-9]X){3}/i; // Number of group occurances in string
 
 
+////// Character Class has to be number,letter,underscore
+re = /\w/; /// Any character - returns the first character
+re = /\w+/; /// All character - returns the first character
+re = /\W/; /// NON character - returns the first character
+re = /\d/; // Match any digit
+
+
 
 
 
