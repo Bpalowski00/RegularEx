@@ -24,13 +24,20 @@ re = /[0-9]ray/; // Matches any diget any range EX- [0-2]ray
 /// Braces {} -  Quantifiers
 re = /Hel{2}o/i; // Number of characters or numbers in that string - Hello has 2 L
 
+re = /Hel{2,4}o/i; // Number of characters or numbers in that string - 2-4 of that kind in the string
+re = /Hel{2,}o/i; // Number of characters or numbers in that string - At least 2 times in a string or more
+
+///// Parentheses - Grouping
+
+re = /([0-9]X){3}/i; // Number of group occurances in string
+
 
 
 
 
 // String to match
 //const str = 'Gray';
-const str = 'Hello World';
+const str = '1x2x3x';
 
 // Log results
 const result = re.exec(str);
