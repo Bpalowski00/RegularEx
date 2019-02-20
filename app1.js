@@ -37,14 +37,22 @@ re = /\w/; /// Any character - returns the first character
 re = /\w+/; /// All character - returns the first character
 re = /\W/; /// NON character - returns the first character
 re = /\d/; // Match any digit
+re = /\d+/; // Match any digit 0 or mor times
+re = /\D/; // Matches any Non-digit
+re = /\s/; //Matches any white space
+re = /\S/; //MAtch any non white space char
+re = /Hell\b/i; // Word boundary
 
+// Assertions
+re = /herb(?=y)/; // Matches x only if followed by y
+re = /x(?!y)/; // Matches x only if not followed by y
 
 
 
 
 // String to match
 //const str = 'Gray';
-const str = '1x2x3x';
+const str = 'xb';
 
 // Log results
 const result = re.exec(str);
